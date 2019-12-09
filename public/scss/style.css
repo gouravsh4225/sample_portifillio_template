@@ -9,6 +9,7 @@ html[data-theme="light"] {
   --color-text: #02153a;
   font-family: "Cambo";
   --box-color: rgba(0, 0, 0, 0.15);
+  --hambuger-color: rgba(2, 29, 70, 1);
 }
 
 /* Dark Theme*/
@@ -23,6 +24,7 @@ html[data-theme="dark"] {
   --color-text: #ffffff;
   font-family: "Cambo";
   --box-color: rgba(255, 255, 255, 0.15);
+  --hambuger-color: rgba(255, 255, 255, 1);
 }
 
 .fixed-top {
@@ -366,6 +368,35 @@ section {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: var(--hambuger-color);
+  margin: 6px 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.main__hamburger {
+  cursor: pointer;
+}
+
+.change__menu .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change__menu .bar2 {
+  opacity: 0;
+}
+
+.change__menu .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
 }
 
 /* Extra small devices (phones, 600px and down) */

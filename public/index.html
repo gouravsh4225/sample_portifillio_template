@@ -19,6 +19,7 @@
 
   <body class="main_body">
     <main>
+      <div class="modal__menu"></div>
       <div class="container">
         <!--- For Header -->
         <div id="header_id">
@@ -32,7 +33,14 @@
                 </div>
                 <div class="margin-auto"></div>
                 <div class="main__header-links">
-                  <div>Menu bar</div>
+                  <section
+                    class="main__hamburger"
+                    onclick="openMenuModal(this)"
+                  >
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                  </section>
                   <ul>
                     <!-- <li>
                       <a href="#home">Home</a>
@@ -249,6 +257,9 @@
             document.documentElement.setAttribute("data-theme", "light");
           }
         });
+      function openMenuModal(x) {
+        x.classList.toggle("change__menu");
+      }
       //// For Nav
       // sticky = document.getElementById("header_id").offsetTop;
       // nav = document.getElementById("header_id").style.height;
