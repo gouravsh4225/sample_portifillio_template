@@ -1,84 +1,291 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="assets/gourav-sharma.jpg">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="assets/gourav-sharma.jpg" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
-        href="https://fonts.googleapis.com/css?family=Arima+Madurai|Cambo|Great+Vibes|Pacifico|Russo+One|Sacramento|Tangerine"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
-        integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-
+      href="https://fonts.googleapis.com/css?family=Arima+Madurai|Cambo|Great+Vibes|Pacifico|Russo+One|Sacramento|Tangerine"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./scss/style.css" />
+    <link
+      rel="stylesheet"
+      href="scss/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
     <title>Gourav Sharma</title>
-</head>
+  </head>
 
-<body class="class">
-    <div class="container-fluid">
-        <div class="main_content">
-            <!---SideBar Start here-->
-            <div class="aside">
-                <aside>
-                    hey
-                </aside>
+  <body class="main_body">
+    <main>
+      <div class="container">
+        <!--- For Header -->
+        <div id="header_id">
+          <header>
+            <div class="main__header">
+              <nav class="main__header-nav">
+                <div class="main__header-log">
+                  <a href="./index.html" class="main__header-image">
+                    <img src="./assets/image2.jpg" />
+                  </a>
+                </div>
+                <div class="margin-auto"></div>
+                <div class="main__header-links">
+                  <div>Menu bar</div>
+                  <ul>
+                    <!-- <li>
+                      <a href="#home">Home</a>
+                    </li>
+                    <li>
+                      <a href="#about">About</a>
+                    </li>
+                    <li>
+                      <a href="#home">Contact</a>
+                    </li> -->
+                    <li class="changeThemeToggle" id="changeTheme">
+                      <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
             </div>
-            <div class="right_content">
-                fgfhjkjew
-            </div>
+          </header>
         </div>
-    </div>
+        <!---Header End -->
+        <section class="home__section">
+          <div class="home__section-image">
+            <div
+              class="home__section-head flex flex-direction-row justify-center mt-60"
+            >
+              <div class="text-center">
+                <strong>Hello</strong>,<strong>Hola</strong>,<strong
+                  >नमस्ते</strong
+                >
+              </div>
+            </div>
+            <div class="flex mt-48 home__dir">
+              <div class="home__section__greeting">
+                <div class="fw-500 home__about">
+                  <p>
+                    My name is Gourav Sharma I'm a 25 years old Front End
+                    Developer based in Pune. I describe myself as a developer
+                    who loves coding, open source, and the web platform.
+                    Currently I'm working at a company called Datarynx,Pune, as
+                    a Front End Engineer.
+                  </p>
+                  <div>
+                    Also, I enjoy writing blogs as well
+                  </div>
+                  <div class="social_lists mt-15">
+                    <a
+                      href="https://twitter.com/GouravS25938222"
+                      target="_blank"
+                      class="social_list"
+                    >
+                      <i class="fa fa-twitter fa-1x"></i>
+                    </a>
+                    <a
+                      href="https://github.com/gouravsh4225"
+                      target="_blank"
+                      class="social_list"
+                    >
+                      <i class="fa fa-github fa-1x"></i
+                    ></a>
+                    <a
+                      href="https://www.linkedin.com/in/gourav-sharma4225/"
+                      target="_blank"
+                      class="social_list"
+                    >
+                      <i class="fa fa-linkedin fa-1x"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="home__section-profile_image">
+                <img src="./assets/gourav-sharma.jpg" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="writing__section">
+          <div class="writing__section-heading">Writings</div>
+          <p class="writing__section-Subheading">
+            The latests posts of my blog.
+          </p>
+          <div class="writing__section__post mt-15">
+            <section class="blogs-post">
+              <div class=" flex flex-direction-row blog_section-scroll">
+                <article class="post">
+                  <div class="post__header">
+                    <img
+                      class="post__header-image"
+                      src="./assets/blogs__images/angular__nested_form.png"
+                    />
+                  </div>
+                  <div class="post__content">
+                    <header>
+                      <h2 class="post__content-title">
+                        How To Build Nested Reactive Form in Angular
+                      </h2>
+                    </header>
+                  </div>
+                  <div class="post__footer">
+                    <a
+                      href="https://medium.com/@gouravsh4225/nested-reactive-form-in-angular-b18c267ed32c"
+                      class="read__more"
+                      target="_blank"
+                      >Read More
+                      <span> <i class="fa fa-arrow-right"></i> </span>
+                    </a>
+                  </div>
+                </article>
+                <article class="post">
+                  <div class="post__header">
+                    <img
+                      class="post__header-image"
+                      src="./assets/blogs__images/angular_vs_angularjs.png"
+                    />
+                  </div>
+                  <div class="post__content">
+                    <header>
+                      <h2 class="post__content-title">
+                        Difference Between Angular Js Vs Angular
+                      </h2>
+                    </header>
+                  </div>
+                  <div class="post__footer">
+                    <a
+                      href="https://medium.com/@gouravsh4225/difference-between-angular-js-vs-angular-e6f65ca1f112"
+                      class="read__more"
+                      target="_blank"
+                      >Read More <span> <i class="fa fa-arrow-right"></i> </span
+                    ></a>
+                  </div>
+                </article>
+                <article class="post">
+                  <div class="post__header">
+                    <img
+                      class="post__header-image"
+                      src="./assets/blogs__images/reactjs.png"
+                    />
+                  </div>
+                  <div class="post__content">
+                    <header>
+                      <h2 class="post__content-title">
+                        Create React Web Application
+                      </h2>
+                    </header>
+                  </div>
+                  <div class="post__footer">
+                    <a
+                      href="https://medium.com/@gouravsh4225/create-react-web-application-7908d5bd8f3c"
+                      class="read__more"
+                      target="_blank"
+                      >Read More <span> <i class="fa fa-arrow-right"></i> </span
+                    ></a>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </div>
+        </section>
+        <footer class="footer">
+          <h3 class="footer__heading">Gourav Sharma</h3>
+          <div class="footer__navigation flex ">
+            <ul class="lists flex alignItem-center">
+              <a href="" class="list-item">
+                <li>Home</li>
+              </a>
+              <a href="" class="list-item">
+                <li>About</li>
+              </a>
+              <a href="" class="list-item">
+                <li>Contact</li>
+              </a>
+            </ul>
+            <div class="social margin-auto">
+              <div class="social_lists">
+                <a
+                  href="https://twitter.com/GouravS25938222"
+                  target="_blank"
+                  class="social_list"
+                >
+                  <i class="fa fa-twitter fa-2x"></i>
+                </a>
+                <a
+                  href="https://github.com/gouravsh4225"
+                  target="_blank"
+                  class="social_list"
+                >
+                  <i class="fa fa-github fa-2x"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/gourav-sharma4225/"
+                  target="_blank"
+                  class="social_list"
+                >
+                  <i class="fa fa-linkedin fa-2x"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </main>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <script>
+      /// For Change Theme of Document
+      let changeTheme = document
+        .getElementById("changeTheme")
+        .addEventListener("click", () => {
+          document.documentElement.classList.add("transition");
+          window.setTimeout(() => {
+            document.documentElement.classList.remove("transition");
+          }, 1000);
+          if (document.documentElement.getAttribute("data-theme") === "light") {
+            document.documentElement.setAttribute("data-theme", "dark");
+          } else {
+            document.documentElement.setAttribute("data-theme", "light");
+          }
+        });
+      //// For Nav
+      // sticky = document.getElementById("header_id").offsetTop;
+      // nav = document.getElementById("header_id").style.height;
+      // window.addEventListener("scroll", function() {
+      //   if (scrollY >= sticky) {
+      //     document.getElementById("header_id").classList.add("fixed-top");
+      //   } else {
+      //     document.getElementById("header_id").classList.remove("fixed-top");
+      //   }
+      // });
+    </script>
     <!----Script Start here Bro-->
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
     <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyD-5UBapMLQsk18nH2YVdfZSTaZY-jWbqU",
-            authDomain: "gourav-sharma.firebaseapp.com",
-            databaseURL: "https://gourav-sharma.firebaseio.com",
-            projectId: "gourav-sharma",
-            storageBucket: "gourav-sharma.appspot.com",
-            messagingSenderId: "1080939965936"
-        };
-        firebase.initializeApp(config);
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyD-5UBapMLQsk18nH2YVdfZSTaZY-jWbqU",
+        authDomain: "gourav-sharma.firebaseapp.com",
+        databaseURL: "https://gourav-sharma.firebaseio.com",
+        projectId: "gourav-sharma",
+        storageBucket: "gourav-sharma.appspot.com",
+        messagingSenderId: "1080939965936"
+      };
+      firebase.initializeApp(config);
     </script>
-    </script>
-
-    <script src="js/script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    <script src="./js/script.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
+        crossorigin="anonymous"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
         integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
         crossorigin="anonymous"></script>
-    <script src="https://use.fontawesome.com/3d69013c70.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-</body>
-
+    <script src="https://use.fontawesome.com/3d69013c70.js"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
+  </body>
 </html>
