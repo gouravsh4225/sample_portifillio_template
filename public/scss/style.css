@@ -399,6 +399,51 @@ section {
   transform: rotate(45deg) translate(-8px, -8px);
 }
 
+.modal__menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: var(--bg-body);
+  top: 0;
+}
+
+.modal__menu .modal__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.modal__menu .modal__content .navigation__nav {
+  text-align: center;
+}
+
+.modal__menu .modal__content .navigation__nav .navigation__list .navigation__item {
+  margin: 1rem;
+}
+
+.modal__menu .modal__content .navigation__nav .navigation__list .navigation__item .navigation__link {
+  display: block;
+  font-size: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  background-size: 220%;
+  color: var(--color-heading);
+}
+
+.navigation__item:hover .navigation__link {
+  background-image: linear-gradient(120deg, transparent 0%, transparent 2%, white 0%);
+  background-size: 100% !important;
+  color: skyblue !important;
+  -webkit-transform: translateX(10%);
+          transform: translateX(10%);
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .home__dir {

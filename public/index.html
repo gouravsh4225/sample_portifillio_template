@@ -19,9 +19,27 @@
 
   <body class="main_body">
     <main>
-      <div class="modal__menu"></div>
+      <div class="modal__menu">
+        <div class="modal__content">
+          <nav class="navigation__nav">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a href="" class="navigation__link">Home</a>
+              </li>
+              <li class="navigation__item">
+                <a href="" class="navigation__link">About</a>
+              </li>
+              <li class="navigation__item">
+                <a href="" class="navigation__link">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
       <div class="container">
         <!--- For Header -->
+        <!---new Header -->
+        <div></div>
         <div id="header_id">
           <header>
             <div class="main__header">
@@ -36,22 +54,20 @@
                   <section
                     class="main__hamburger"
                     onclick="openMenuModal(this)"
+                    data-toggle="tooltip"
+                    title="Menu"
                   >
                     <div class="bar1"></div>
                     <div class="bar2"></div>
                     <div class="bar3"></div>
                   </section>
                   <ul>
-                    <!-- <li>
-                      <a href="#home">Home</a>
-                    </li>
-                    <li>
-                      <a href="#about">About</a>
-                    </li>
-                    <li>
-                      <a href="#home">Contact</a>
-                    </li> -->
-                    <li class="changeThemeToggle" id="changeTheme">
+                    <li
+                      class="changeThemeToggle"
+                      id="changeTheme"
+                      data-toggle="tooltip"
+                      title="Dark/Light Theme"
+                    >
                       <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
                     </li>
                   </ul>
