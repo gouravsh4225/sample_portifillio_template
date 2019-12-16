@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css?family=Arima+Madurai|Cambo|Great+Vibes|Pacifico|Russo+One|Sacramento|Tangerine"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./scss/Navigation.css" />
     <link rel="stylesheet" href="./scss/style.css" />
     <link
       rel="stylesheet"
@@ -19,28 +20,46 @@
 
   <body class="main_body">
     <main>
-      <div class="modal__menu">
-        <div class="modal__content">
-          <nav class="navigation__nav">
-            <ul class="navigation__list">
-              <li class="navigation__item">
-                <a href="" class="navigation__link">Home</a>
+      <div class="container">
+        <!--- For Header -->
+        <div class="new__navigation">
+          <input
+            type="checkbox"
+            class="new__navigation__checkbox"
+            id="navi-toggle"
+          />
+          <label for="navi-toggle" class="new__navigation__button">Menu</label>
+          <div class="new__navigation__background">&nbsp;</div>
+          <nav class="new__navigation__nav">
+            <ul class="new__navigation__list">
+              <li class="new__navigation__item">
+                <a href="#" class="new__navigation__link">
+                  <span class="new__navigation__icon">
+                    <i class="fa fa-home"></i>
+                  </span>
+                  Home</a
+                >
               </li>
-              <li class="navigation__item">
-                <a href="" class="navigation__link">About</a>
+              <li class="new__navigation__item">
+                <a href="#" class="new__navigation__link">
+                  <span class="new__navigation__icon">
+                    <i class="fa fa-info-circle"></i>
+                  </span>
+                  About</a
+                >
               </li>
-              <li class="navigation__item">
-                <a href="" class="navigation__link">Contact</a>
+              <li class="new__navigation__item">
+                <a href="#" class="new__navigation__link">
+                  <span class="new__navigation__icon">
+                    <i class="fa fa-address-card"></i>
+                  </span>
+                  Contact</a
+                >
               </li>
             </ul>
           </nav>
         </div>
-      </div>
-      <div class="container">
-        <!--- For Header -->
-        <!---new Header -->
-        <div></div>
-        <div id="header_id">
+        <!-- <div id="header_id" >
           <header>
             <div class="main__header">
               <nav class="main__header-nav">
@@ -75,7 +94,7 @@
               </nav>
             </div>
           </header>
-        </div>
+        </div> -->
         <!---Header End -->
         <section class="home__section">
           <div class="home__section-image">
