@@ -1,89 +1,120 @@
-// .new__navigation {
-//   .new__navigation__checkbox {
-//     display: none;
-//   }
-//   .new__navigation__button {
-//     background: #ffffff;
-//     height: 7rem;
-//     width: 7rem;
-//     position: fixed;
-//     top: 2rem;
-//     right: 2rem;
-//     border-radius: 50%;
-//     z-index: 2000;
-//   }
-//   .new__navigation__background {
-//     height: 6rem;
-//     width: 6rem;
-//     border-radius: 50%;
-//     position: fixed;
-//     top: 2.5rem;
-//     right: 2.5rem;
-//     background-image: radial-gradient(#021d46, #ffffff);
-//     z-index: 1000;
-//     box-shadow: 0 1rem 3rem rgba(#000000, 0.1);
-//     transition: transform 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
-//   }
-//   .new__navigation__nav {
-//     height: 100%;
-//     position: fixed;
-//     top: 0;
-//     left: -50rem;
-//     z-index: 1500;
-//     opacity: 0;
-//     width: 0;
-//     transition: all 0.8s;
-//     background: #021d46;
-//   }
-//   .new__navigation__list {
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     list-style: none;
-//     text-align: center;
-//     width: 100%;
-//   }
-//   .new__navigation__link {
-//     &:link,
-//     &:visited {
-//       display: inline-block;
-//       padding: 1rem 2rem;
-//       font-size: 3rem;
-//       font-weight: 300;
-//       color: #fff;
-//       text-decoration: none;
-//       text-transform: uppercase;
-//       background-image: linear-gradient(
-//         120deg,
-//         transparent 0%,
-//         transparent 50%,
-//         #ffffff 50%
-//       );
-//       background-size: 230%;
-//       transition: all 0.4s;
-//       .new__navigation__icon {
-//         display: inline-block;
-//         margin-right: 1.5rem;
-//       }
-//     }
-//     &:hover,
-//     &:active {
-//       background-position: 100%;
-//       transform: translateX(1rem);
-//       color: #021d46;
-//     }
-//   }
-//   .new__navigation__item {
-//     margin: 1rem;
-//     width: 100%;
-//   }
-//   .new__navigation__checkbox:checked ~ .new__navigation__background {
-//     transform: scale(80);
-//   }
-//   .new__navigation__checkbox:checked ~ .new__navigation__nav {
-//     width: 100%;
-//     opacity: 1;
-//     left: 0rem;
-//   }
-// }
+.header__fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 5rem;
+  z-index: 1000;
+  background: #021d46;
+  .main__header {
+    display: flex;
+    padding: 0rem 6rem;
+    justify-content: space-between;
+  }
+  .main__header-log {
+    img {
+      height: 4rem;
+      width: 4rem;
+      border-radius: 50%;
+      margin: 0.4rem 0 0 0;
+    }
+  }
+  .theme__toggle-section {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+    font-size: 2rem;
+    .theme__toggle-label {
+      margin-left: 1rem;
+      position: relative;
+      display: block;
+      height: 1rem;
+      width: 3rem;
+      background: #898989;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      &::after {
+        position: absolute;
+        top: -0.3rem;
+        left: -0.1rem;
+        display: block;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 100px;
+        background: white;
+        box-shadow: 0px 3px 3px rgba(#000, 0.05);
+        content: "";
+        transition: all 0.3s ease;
+      }
+    }
+  }
+  .hamburger__section {
+    label {
+      z-index: 2000;
+      position: fixed;
+      color: #fff;
+      top: 3%;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+    .hamburger__lists {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100%;
+      transition: all 0.4s;
+      opacity: 0;
+      z-index: 1500;
+      background: #000;
+      .hamburger__list {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        .hamburger__item {
+          margin: 1rem;
+          .hamburger__link {
+            color: #fff;
+            display: flex;
+            padding: 1rem 2rem;
+            font-size: 3rem;
+            font-weight: 300;
+            background-image: linear-gradient(
+              120deg,
+              transparent 0%,
+              transparent 50%,
+              white 50%
+            );
+            background-size: 230%;
+            transition: all 0.4s;
+            &:hover,
+            &:active {
+              background-position: 100%;
+              transform: translateX(1rem);
+              color: #021d46;
+            }
+            .hamburger__link--icon {
+              margin-right: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.hamburger__open:checked ~ .hamburger__lists {
+  opacity: 1;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+.theme__toggle-checkbox:checked ~ .theme__toggle-label {
+  background: #6fbeb5;
+  &::after {
+    left: 1.5rem;
+    background: greenyellow;
+  }
+}

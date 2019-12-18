@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,81 +20,79 @@
 
   <body class="main_body">
     <main>
-      <div class="container">
-        <!--- For Header -->
-        <div class="new__navigation">
-          <input
-            type="checkbox"
-            class="new__navigation__checkbox"
-            id="navi-toggle"
-          />
-          <label for="navi-toggle" class="new__navigation__button">Menu</label>
-          <div class="new__navigation__background">&nbsp;</div>
-          <nav class="new__navigation__nav">
-            <ul class="new__navigation__list">
-              <li class="new__navigation__item">
-                <a href="#" class="new__navigation__link">
-                  <span class="new__navigation__icon">
-                    <i class="fa fa-home"></i>
-                  </span>
-                  Home</a
+      <!----Header-->
+      <div id="header_id">
+        <header class="header__fixed">
+          <div class="main__header">
+            <div class="main__header-log">
+              <a href="./index.html" class="main__header-image">
+                <img src="./assets/image2.jpg" />
+              </a>
+            </div>
+            <div class="margin-auto">
+              <div class="theme__toggle-section">
+                <div class="theme__toggle-heading">Gourav Sharma</div>
+                <!-- <input
+                  type="checkbox"
+                  id="theme__toggle"
+                  class="theme__toggle-checkbox hidden"
+                />
+                <label
+                  for="theme__toggle"
+                  class="theme__toggle-label"
+                  id="changeTheme"
+                ></label> -->
+              </div>
+            </div>
+            <div class="main__header-links">
+              <div class="hamburger__section">
+                <input
+                  type="checkbox"
+                  id="hamburger__label"
+                  class="hidden hamburger__open"
+                />
+                <label
+                  for="hamburger__label"
+                  onclick="openMenuModal()"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title="Menu"
                 >
-              </li>
-              <li class="new__navigation__item">
-                <a href="#" class="new__navigation__link">
-                  <span class="new__navigation__icon">
-                    <i class="fa fa-info-circle"></i>
-                  </span>
-                  About</a
-                >
-              </li>
-              <li class="new__navigation__item">
-                <a href="#" class="new__navigation__link">
-                  <span class="new__navigation__icon">
-                    <i class="fa fa-address-card"></i>
-                  </span>
-                  Contact</a
-                >
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <!-- <div id="header_id" >
-          <header>
-            <div class="main__header">
-              <nav class="main__header-nav">
-                <div class="main__header-log">
-                  <a href="./index.html" class="main__header-image">
-                    <img src="./assets/image2.jpg" />
-                  </a>
-                </div>
-                <div class="margin-auto"></div>
-                <div class="main__header-links">
-                  <section
-                    class="main__hamburger"
-                    onclick="openMenuModal(this)"
-                    data-toggle="tooltip"
-                    title="Menu"
-                  >
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                  </section>
-                  <ul>
-                    <li
-                      class="changeThemeToggle"
-                      id="changeTheme"
-                      data-toggle="tooltip"
-                      title="Dark/Light Theme"
-                    >
-                      <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                  <i class="fa fa-bars" id="bars__class"></i>
+                </label>
+                <div class="hamburger__lists">
+                  <ul class="hamburger__list">
+                    <li class="hamburger__item">
+                      <a href="" class="hamburger__link"
+                        ><span class="hamburger__link--icon">
+                          <i class="fa fa-home"></i>
+                        </span>
+                        Home
+                      </a>
+                    </li>
+                    <li class="hamburger__item">
+                      <a href="" class="hamburger__link">
+                        <span class="hamburger__link--icon">
+                          <i class="fa fa-info-circle"></i>
+                        </span>
+                        About
+                      </a>
+                    </li>
+                    <li class="hamburger__item">
+                      <a href="" class="hamburger__link">
+                        <span class="hamburger__link--icon">
+                          <i class="fa fa-address-card"></i> </span
+                        >Contact
+                      </a>
                     </li>
                   </ul>
                 </div>
-              </nav>
+              </div>
             </div>
-          </header>
-        </div> -->
+          </div>
+        </header>
+      </div>
+      <div class="container">
         <!---Header End -->
         <section class="home__section">
           <div class="home__section-image">
@@ -229,6 +227,29 @@
                     ></a>
                   </div>
                 </article>
+                <article class="post">
+                  <div class="post__header">
+                    <img
+                      class="post__header-image"
+                      src="./assets/blogs__images/reactjs.png"
+                    />
+                  </div>
+                  <div class="post__content">
+                    <header>
+                      <h2 class="post__content-title">
+                        Create Global Modal in React js
+                      </h2>
+                    </header>
+                  </div>
+                  <div class="post__footer">
+                    <a
+                      href="https://medium.com/@gouravsh4225/create-global-modal-in-react-js-5cefd07cbab1"
+                      class="read__more"
+                      target="_blank"
+                      >Read More <span> <i class="fa fa-arrow-right"></i> </span
+                    ></a>
+                  </div>
+                </article>
               </div>
             </section>
           </div>
@@ -292,19 +313,14 @@
             document.documentElement.setAttribute("data-theme", "light");
           }
         });
-      function openMenuModal(x) {
-        x.classList.toggle("change__menu");
+      function openMenuModal() {
+        let barsClass = document.getElementById("bars__class");
+        if (barsClass.className == "fa fa-bars") {
+          barsClass.className = "fa fa-times";
+        } else {
+          barsClass.className = "fa fa-bars";
+        }
       }
-      //// For Nav
-      // sticky = document.getElementById("header_id").offsetTop;
-      // nav = document.getElementById("header_id").style.height;
-      // window.addEventListener("scroll", function() {
-      //   if (scrollY >= sticky) {
-      //     document.getElementById("header_id").classList.add("fixed-top");
-      //   } else {
-      //     document.getElementById("header_id").classList.remove("fixed-top");
-      //   }
-      // });
     </script>
     <!----Script Start here Bro-->
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
@@ -321,17 +337,5 @@
       firebase.initializeApp(config);
     </script>
     <script src="./js/script.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script> -->
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
-        integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
-        crossorigin="anonymous"></script>
-    <script src="https://use.fontawesome.com/3d69013c70.js"></script> -->
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
   </body>
 </html>
