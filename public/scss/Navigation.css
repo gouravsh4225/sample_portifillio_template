@@ -4,7 +4,6 @@
   width: 100%;
   height: 5rem;
   z-index: 1000;
-  background: #021d46;
 }
 
 .header__fixed .main__header {
@@ -25,21 +24,17 @@
 }
 
 .header__fixed .theme__toggle-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
+  -ms-flex-align: center;
   color: #fff;
+  font-size: 2rem;
+  display: unset;
   font-size: 2rem;
 }
 
 .header__fixed .theme__toggle-section .theme__toggle-label {
   margin-left: 1rem;
   position: relative;
-  display: block;
+  display: inline-block;
   height: 1rem;
   width: 3rem;
   background: #898989;
@@ -69,7 +64,6 @@
   z-index: 2000;
   position: fixed;
   color: #fff;
-  top: 3%;
   font-size: 2rem;
   cursor: pointer;
 }
@@ -78,20 +72,19 @@
   position: fixed;
   top: 0;
   right: 0;
-  height: 100%;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
   opacity: 0;
   z-index: 1500;
   background: #000;
+  height: 32rem;
+  border-bottom-left-radius: 32rem;
 }
 
 .header__fixed .hamburger__section .hamburger__lists .hamburger__list {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  display: block;
+  width: auto;
+  padding: 7rem 8rem 0rem 13rem;
 }
 
 .header__fixed .hamburger__section .hamburger__lists .hamburger__list .hamburger__item {
@@ -100,23 +93,34 @@
 
 .header__fixed .hamburger__section .hamburger__lists .hamburger__list .hamburger__item .hamburger__link {
   color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 1rem 2rem;
-  font-size: 3rem;
+  display: block;
+  font-size: 1.5rem;
   font-weight: 300;
-  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
   background-size: 230%;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+  position: relative;
 }
 
 .header__fixed .hamburger__section .hamburger__lists .hamburger__list .hamburger__item .hamburger__link:hover, .header__fixed .hamburger__section .hamburger__lists .hamburger__list .hamburger__item .hamburger__link:active {
-  background-position: 100%;
-  -webkit-transform: translateX(1rem);
-          transform: translateX(1rem);
-  color: #021d46;
+  color: #fff;
+}
+
+.header__fixed .hamburger__section .hamburger__lists .hamburger__list .hamburger__item .hamburger__link:hover::after, .header__fixed .hamburger__section .hamburger__lists .hamburger__list .hamburger__item .hamburger__link:active::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.header__fixed .hamburger__section .hamburger__lists .hamburger__list .hamburger__item .hamburger__link::after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #fff;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
 }
 
 .header__fixed .hamburger__section .hamburger__lists .hamburger__list .hamburger__item .hamburger__link .hamburger__link--icon {
@@ -125,7 +129,7 @@
 
 .hamburger__open:checked ~ .hamburger__lists {
   opacity: 1;
-  width: 100%;
+  width: 32rem;
 }
 
 .hidden {

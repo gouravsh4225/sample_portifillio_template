@@ -4,7 +4,7 @@
   width: 100%;
   height: 5rem;
   z-index: 1000;
-  background: #021d46;
+  // background: #021d46;
   .main__header {
     display: flex;
     padding: 0rem 6rem;
@@ -19,15 +19,15 @@
     }
   }
   .theme__toggle-section {
-    display: flex;
-    align-items: center;
-    height: 100%;
+    -ms-flex-align: center;
     color: #fff;
+    font-size: 2rem;
+    display: unset;
     font-size: 2rem;
     .theme__toggle-label {
       margin-left: 1rem;
       position: relative;
-      display: block;
+      display: inline-block;
       height: 1rem;
       width: 3rem;
       background: #898989;
@@ -54,7 +54,7 @@
       z-index: 2000;
       position: fixed;
       color: #fff;
-      top: 3%;
+      // top: 3%;
       font-size: 2rem;
       cursor: pointer;
     }
@@ -62,37 +62,39 @@
       position: fixed;
       top: 0;
       right: 0;
-      height: 100%;
       transition: all 0.4s;
       opacity: 0;
       z-index: 1500;
       background: #000;
+      height: 32rem;
+      border-bottom-left-radius: 32rem;
       .hamburger__list {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        display: block;
+        width: auto;
+        padding: 7rem 8rem 0rem 13rem;
         .hamburger__item {
           margin: 1rem;
           .hamburger__link {
             color: #fff;
-            display: flex;
-            padding: 1rem 2rem;
-            font-size: 3rem;
+            display: block;
+            font-size: 1.5rem;
             font-weight: 300;
-            background-image: linear-gradient(
-              120deg,
-              transparent 0%,
-              transparent 50%,
-              white 50%
-            );
             background-size: 230%;
             transition: all 0.4s;
+            position: relative;
             &:hover,
             &:active {
-              background-position: 100%;
-              transform: translateX(1rem);
-              color: #021d46;
+              color: #fff;
+              &::after {
+                transform: scaleX(1);
+              }
+            }
+            &::after {
+              display: block;
+              content: "";
+              border-bottom: solid 3px #fff;
+              transform: scaleX(0);
+              transition: transform 250ms ease-in-out;
             }
             .hamburger__link--icon {
               margin-right: 0.8rem;
@@ -103,9 +105,10 @@
     }
   }
 }
+
 .hamburger__open:checked ~ .hamburger__lists {
   opacity: 1;
-  width: 100%;
+  width: 32rem;
 }
 
 .hidden {
